@@ -1,0 +1,10 @@
+---
+instances: 1
+memory: 512M
+applications:
+  - name: microservice2
+    host: microservice2
+    path: target/taxiservice-1.0-SNAPSHOT.jar
+    env:
+      SPRING_PROFILES_ACTIVE: pcf
+      CF_TARGET: https://api.run.pez.pivotal.io
